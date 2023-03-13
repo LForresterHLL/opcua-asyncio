@@ -282,6 +282,7 @@ class Node:
         params = ua.WriteParameters()
         params.NodesToWrite = [attr]
         result = await self.session.write(params)
+        print(result)
         result[0].check()
 
     async def write_params(self, params):
